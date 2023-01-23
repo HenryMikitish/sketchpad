@@ -22,8 +22,25 @@ body {
 }
 
 .padborder {
+    display: flex;
+    flex-direction: column;
     height: 900px;
     width: 900px;
+    border-style: solid;
+    border-width: 2px;
+    border-color:rgb(0, 0, 0);
+    border-radius: 2px;
+}
+
+.grid {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+}
+
+.smallgrid {
+    height: 90px;
+    width: 90px;
     border-style: solid;
     border-width: 2px;
     border-color:rgb(0, 0, 0);
