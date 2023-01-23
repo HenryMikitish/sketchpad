@@ -19,6 +19,8 @@ body {
 .padcontainer {
     display: flex;
     justify-content: center;
+    text-align: center;
+    font-family:'Courier New', Courier, monospace;
 }
 
 .padborder {
@@ -45,4 +47,8 @@ body {
     border-color:rgb(0, 0, 0);
     border-radius: 2px;
     margin: -1px;
+}
+
+.green {
+    background-color: green;
 }
