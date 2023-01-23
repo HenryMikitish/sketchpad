@@ -1,11 +1,21 @@
 const pad = document.querySelector('.padborder');
 const input = document.querySelector('#textbox');
+const paintColor = document.querySelector('.paintcolor');
 let colorBlack = true;
 
 colortoggle.addEventListener('click', function()
 {
-    if (colorBlack == true) {colorBlack = false}
-    else {colorBlack = true};
+    if (colorBlack == true) {
+        colorBlack = false;
+        paintColor.textContent = 'Now painting in rainbow...';
+        let randomColor = Math.floor(Math.random()*16777215).toString(16);
+        colortoggle.style.backgroundColor = "#" + randomColor;
+    }
+    else {
+        colorBlack = true;
+        paintColor.textContent = 'Now painting in monochrome...';
+        colortoggle.style.backgroundColor = 'black';
+    };
 }); 
 
 create.addEventListener('click', function() {
@@ -31,9 +41,9 @@ create.addEventListener('click', function() {
         let warning = document.createElement('div');
         warning.textContent = 'Please input a number between 2 and 100.'
         pad.appendChild(warning);
-    }
+    };
 
-    let gridSquares = document.querySelectorAll('.gridsquare')
+    let gridSquares = document.querySelectorAll('.gridsquare');
 
     for (k = 0; k <= gridSquares.length; k++) {
         gridSquares[k].addEventListener('mouseover', function(e) {
@@ -41,10 +51,10 @@ create.addEventListener('click', function() {
             if (colorBlack == true) {e.target.style.backgroundColor = 'black'}
 
             else {
-            let randomColor = Math.floor(Math.random()*16777215).toString(16);
-            e.target.style.backgroundColor = "#" + randomColor;
+                let randomColor = Math.floor(Math.random()*16777215).toString(16);
+                e.target.style.backgroundColor = "#" + randomColor;
             }
-        });
-    }
+        })
+    };
 
 });

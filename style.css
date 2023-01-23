@@ -11,9 +11,32 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    gap: 40px;
     font-family:'Courier New', Courier, monospace;
-    margin: 0 0 50px 0;
+    margin: 0;
     text-align: justify;
+}
+
+#textbox {
+    text-align: center;
+}
+
+#create {
+    color: white;
+    background-color: black;
+}
+
+#colortoggle {
+    color: white;
+    background-color: black;
+}
+
+.paintcolor {
+    display: flex;
+    justify-content: center;
+    font-family:'Courier New', Courier, monospace;
+    height: 20px;
+    padding: 20px;
 }
 
 .padcontainer {
