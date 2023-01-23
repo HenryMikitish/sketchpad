@@ -1,5 +1,12 @@
 const pad = document.querySelector('.padborder');
 const input = document.querySelector('#textbox');
+let colorBlack = true;
+
+colortoggle.addEventListener('click', function()
+{
+    if (colorBlack == true) {colorBlack = false}
+    else {colorBlack = true};
+}); 
 
 create.addEventListener('click', function() {
     let gridSize = Number(input.value);
@@ -30,8 +37,14 @@ create.addEventListener('click', function() {
 
     for (k = 0; k <= gridSquares.length; k++) {
         gridSquares[k].addEventListener('mouseover', function(e) {
+
+            if (colorBlack == true) {e.target.style.backgroundColor = 'black'}
+
+            else {
             let randomColor = Math.floor(Math.random()*16777215).toString(16);
-            e.target.style.backgroundColor = "#" + randomColor});
+            e.target.style.backgroundColor = "#" + randomColor;
+            }
+        });
     }
 
 });
