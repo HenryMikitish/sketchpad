@@ -32,17 +32,17 @@ body {
     border-radius: 2px;
 }
 
-.grid {
+.gridrow {
     display: flex;
     flex-direction: row;
-    padding: 10px;
+    flex-grow: 1;
 }
 
-.smallgrid {
-    height: 90px;
-    width: 90px;
+.gridsquare {
+    flex-grow: 1;
     border-style: solid;
     border-width: 2px;
     border-color:rgb(0, 0, 0);
     border-radius: 2px;
+    margin: -1px;
 }
