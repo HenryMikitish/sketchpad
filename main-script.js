@@ -30,7 +30,8 @@ create.addEventListener('click', function() {
 
     for (k = 0; k <= gridSquares.length; k++) {
         gridSquares[k].addEventListener('mouseover', function(e) {
-            e.target.classList.add('green')});
+            let randomColor = Math.floor(Math.random()*16777215).toString(16);
+            e.target.style.backgroundColor = "#" + randomColor});
     }
 
 });
