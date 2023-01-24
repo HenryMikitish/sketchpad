@@ -45,16 +45,13 @@ create.addEventListener('click', function() {
 
     let gridSquares = document.querySelectorAll('.gridsquare');
 
-    for (k = 0; k <= gridSquares.length; k++) {
-        gridSquares[k].addEventListener('mouseover', function(e) {
+    gridSquares.forEach(gridsquare => gridsquare.addEventListener('mouseover', function(e) {
+        
+        if (colorBlack == true) {e.target.style.backgroundColor = 'black'}
 
-            if (colorBlack == true) {e.target.style.backgroundColor = 'black'}
-
-            else {
-                let randomColor = Math.floor(Math.random()*16777215).toString(16);
-                e.target.style.backgroundColor = "#" + randomColor;
-            }
-        })
-    };
-
+        else {
+            let randomColor = Math.floor(Math.random()*16777215).toString(16);
+            e.target.style.backgroundColor = "#" + randomColor;
+        }
+    }))
 });
